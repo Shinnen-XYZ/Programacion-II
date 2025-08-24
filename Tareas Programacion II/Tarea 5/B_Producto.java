@@ -1,23 +1,23 @@
 package service;
 
 public class B_Producto {
-    private String sku;
+    private String prod;
 
     public B_Producto(){
     }
-    public B_Producto(String sku){
-        this.sku = sku;
+    public B_Producto(String prod){
+        this.prod = prod;
     }
 
-    public String getSku() {
-        return sku;
+    public String getProd() {
+        return prod;
     }
 
-    public void setSku(String sku) {
-        this.sku = sku;
+    public void setProd(String prod) {
+        this.prod = prod;
     }
 
     public String toString(){
-        return "B_Producto: " + sku;
+        return "B_Producto: " + prod;
     }
 }
