@@ -17,7 +17,7 @@ public class B_ProductoTest {
     @Test
     public void testGetSku() {
         String esperado = "Producto001";
-        String obtenido = producto.getSku();
+        String obtenido = producto.getProd();
         assertEquals(esperado, obtenido);
     }
 
@@ -25,7 +25,7 @@ public class B_ProductoTest {
     public void testSetSku() {
         producto.setSku("Producto000");
         String esperado = "Producto000";
-        String obtenido = producto.getSku();
+        String obtenido = producto.getProd();
         assertEquals(esperado, obtenido);
     }
 
