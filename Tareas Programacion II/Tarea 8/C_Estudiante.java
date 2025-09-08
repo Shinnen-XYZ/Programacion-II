@@ -1,9 +1,9 @@
 package service;
 
 public class C_Estudiante {
-    private int carnet;
+    int carnet;
 
-    public C_Estudiante(){
+    public C_Estudiante(int carnet) {
         this.carnet = carnet;
     }
 
@@ -14,7 +14,9 @@ public class C_Estudiante {
     public void setCarnet(int carnet) {
         this.carnet = carnet;
     }
-    public String toString(){
-        return "C_Estudiante" + carnet;
+
+    @Override
+    public String toString() {
+        return "C_Estudiante{carnet=" + carnet + "}";
     }
 }
