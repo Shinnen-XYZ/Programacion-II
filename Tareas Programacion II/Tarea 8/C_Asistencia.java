@@ -1,36 +1,38 @@
 package service;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
-import java.util.*;
+import java.util.ArrayList;
 
-@Getter
-@Setter
-@ToString
 public class C_Asistencia {
-
-
-    private List<C_Estudiante> estudiantes;
+    ArrayList<C_Estudiante> estudiantes;
 
     public C_Asistencia() {
-        estudiantes = new LinkedList();
+        estudiantes = new ArrayList<C_Estudiante>();
     }
 
-    public void addEstudiante(C_Estudiante e) throws RuntimeException{
-        if( null == e )
-            throw new RuntimeException("No se permiten estudiantes vacios");
-        estudiantes.add(e);
+    public void addEstudiante(C_Estudiante estudiante) {
+        if (estudiante == null) {
+            throw new MyException("No se puede agregar un estudiante nulo");
+        }
+        estudiantes.add(estudiante);
     }
 
-    public List<C_Estudiante> getEstudiantes() {
-        return new LinkedList(estudiantes);
+    public ArrayList<C_Estudiante> getEstudiantes() {
+        return estudiantes;
     }
 
-    public void setEstudiantes(List<C_Estudiante> estudiantes) {
-        for (C_Estudiante cEstudiante : this.estudiantes = estudiantes) {
+    @Override
+    public String toString() {
+        return "C_Asistencia{estudiantes=" + estudiantes + "}";
+    }
+
+    public static class MyException extends RuntimeException {
+        public MyException(String mensaje) {
+            super(mensaje);
+        }
+
+        @Override
+        public String toString() {
+            return "MyException: " + getMessage();
         }
     }
-
-
 }
