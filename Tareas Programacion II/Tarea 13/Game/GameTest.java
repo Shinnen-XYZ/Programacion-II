@@ -28,6 +28,7 @@ public class GameTest {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
         this.game.play();
-        Assert.assertEquals("hello", outContent.toString());
+        Assert.assertEquals("Hola....", outContent.toString());
     }
 }
+
