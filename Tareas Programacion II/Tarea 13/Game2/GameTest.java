@@ -45,7 +45,7 @@ public class GameTest {
         when(scanner.nextLine()).thenReturn("Salir");
         game.play();
 
-        Assert.assertTrue(out.toString().contains("¡Vamos a jugar Piedra"));
+        Assert.assertTrue(out.toString().contains("Vamos a jugar Piedra"));
     }
 
     @Test
@@ -103,3 +103,4 @@ public class GameTest {
         Assert.assertTrue(out.toString().contains("derrotas:1"));
     }
 }
+
