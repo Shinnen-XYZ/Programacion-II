@@ -19,7 +19,7 @@ public class Game {
             GameOption opcionJugador = obtenerOpcion(eleccion);
             while(opcionJugador == null)
             {
-                System.out.println("Lo sentimos, parece que no ingresaste una opción correcta. Intenta de nuevo.");
+                System.out.println("Lo siento parece que no ingresaste una opción correcta. Intenta de nuevo.");
                 eleccion = input.nextLine().toUpperCase();
                 opcionJugador = obtenerOpcion(eleccion);
             }
@@ -93,4 +93,5 @@ public class Game {
         System.out.println("Di \"Piedra\", \"Papel\" o \"Tijera\" para indicar tu elección. De lo contrario, di \"Salir\" para terminar.");
     }
 }
+
 
