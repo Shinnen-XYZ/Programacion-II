@@ -14,9 +14,9 @@ public class Game {
     public void play() {
 
         System.out.println("Juguemos Piedra, Papel o Tijera");
-        System.out.println("Escribe \"piedra\", \"papel\" o \"tijera\" para indicar tu elección. De lo contrario, escribe \"salir\" para terminar.");
-        String choice = input.nextLine(); // solicitar respuesta
-        choice = choice.toLowerCase(); // cambiar a minúsculas para consistencia
+        System.out.println("Escribe \"piedra\", \"papel\" o \"tijera\" para indicar tu elección. De lo contrario escribe \"salir\" para terminar.");
+        String choice = input.nextLine(); 
+        choice = choice.toLowerCase(); 
 
         int empates = 0;
         int victorias = 0;
@@ -35,7 +35,7 @@ public class Game {
             }
             else {
                 while (choicenum == 0) {
-                    System.out.println("Lo siento, parece que no ingresaste una opción válida. Intenta de nuevo.");
+                    System.out.println("Lo siento parece que no ingresaste una opción válida. Intenta de nuevo.");
                     choice = input.nextLine();
                     choice = choice.toLowerCase();
                     if (choice.equals("piedra")) {
@@ -80,12 +80,13 @@ public class Game {
 
             System.out.println("Victorias: " + victorias + "\nDerrotas: " + derrotas + "\nEmpates: " + empates);
             System.out.println("Juguemos de nuevo\n");
-            System.out.println("Escribe \"piedra\", \"papel\" o \"tijera\" para indicar tu elección. De lo contrario, escribe \"salir\" para terminar.");
+            System.out.println("Escribe \"piedra\", \"papel\" o \"tijera\" para indicar tu elección. De lo contrario escribe \"salir\" para terminar.");
             choice = input.nextLine();
             choice = choice.toLowerCase();
         }
 
-        if (choice.equals("salir")) // si el usuario escribe "salir", terminar el programa
+        if (choice.equals("salir")) 
             return;
     }
 }
+
