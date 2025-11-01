@@ -24,7 +24,7 @@ public class GameTest {
     public static final int OPCION_TIJERAS = 2;
 
     @InjectMocks
-    private Game juego; // Se mantiene el nombre de la clase Game para la inyección de Mocks
+    private Game juego; 
 
     @Mock
     Scanner scanner;
@@ -44,7 +44,7 @@ public class GameTest {
     @Test
     public void cuando_escribeSALIR_entonces_saleDelJuego() {
         when(scanner.nextLine()).thenReturn("SALIR");
-        juego.jugar(); // El método play() fue traducido a jugar()
+        juego.jugar(); 
 
         Assert.assertTrue(salida.toString().contains("¡Juguemos Piedra"));
     }
@@ -56,7 +56,6 @@ public class GameTest {
 
         juego.jugar();
 
-        // Se verifica la salida en español
         Assert.assertTrue(salida.toString().contains("La computadora eligió tijeras"));
         Assert.assertTrue(salida.toString().contains("ganadas:1"));
     }
@@ -68,7 +67,6 @@ public class GameTest {
 
         juego.jugar();
 
-        // Se verifica la salida en español
         Assert.assertTrue(salida.toString().contains("La computadora eligió papel"));
         Assert.assertTrue(salida.toString().contains("ganadas:1"));
     }
@@ -80,7 +78,6 @@ public class GameTest {
 
         juego.jugar();
 
-        // Se verifica la salida en español
         Assert.assertTrue(salida.toString().contains("La computadora eligió piedra"));
         Assert.assertTrue(salida.toString().contains("ganadas:1"));
     }
@@ -92,7 +89,6 @@ public class GameTest {
 
         juego.jugar();
 
-        // Se verifica la salida en español
         Assert.assertTrue(salida.toString().contains("La computadora eligió piedra"));
         Assert.assertTrue(salida.toString().contains("empates:1"));
     }
@@ -104,8 +100,8 @@ public class GameTest {
 
         juego.jugar();
 
-        // Se verifica la salida en español
         Assert.assertTrue(salida.toString().contains("La computadora eligió papel"));
         Assert.assertTrue(salida.toString().contains("perdidas:1"));
     }
+
 }
