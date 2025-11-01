@@ -2,37 +2,41 @@ package Game2;
 
 public class TablaPuntuacion {
 
-    private Integer tie;
-    private Integer wins;
-    private Integer losses;
+    package Cocumber;
+
+public class TablaPuntuacion {
+
+    private Integer empate;
+    private Integer ganadas;
+    private Integer perdidas;
 
     public TablaPuntuacion() {
-        tie = 0;
-        wins = 0;
-        losses = 0;
+        empate = 0;
+        ganadas = 0;
+        perdidas = 0;
     }
 
-    public Integer getTie() {
-        return tie;
+    public Integer getEmpate() {
+        return empate;
     }
 
-    public Integer getWins() {
-        return wins;
+    public Integer getGanadas() {
+        return ganadas;
     }
 
-    public Integer getLosses() {
-        return losses;
+    public Integer getPerdidas() {
+        return perdidas;
     }
 
-    public void incrementWins() {
-        wins++;
+    public void incrementarGanadas() {
+        ganadas++;
     }
 
-    public void incrementLosses() {
-        losses++;
+    public void incrementarPerdidas() {
+        perdidas++;
     }
 
-    public void incrementTie() {
-        tie++;
+    public void incrementarEmpate() {
+        empate++;
     }
 }
